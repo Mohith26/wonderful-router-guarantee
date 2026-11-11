@@ -41,10 +41,10 @@ const out = {
   perFamily: { testRisk: round(fam.total.risk), savings: round(fam.total.savings), offPremium: round(fam.total.offPremium), mix: fam.total.mix.map(x => round(x)), policies },
   orgWide: { lambda: org.policies[0].lambdaHat, testRisk: round(org.total.risk), savings: round(org.total.savings), offPremium: round(org.total.offPremium) },
   resplits: { B: 200, org: Object.fromEntries(Object.entries(orgSplit).map(([k, v]) => [k, typeof v === 'number' ? round(v) : v])), perFamily: famSplit, perFamilyMean: { lttViolation: round(famLttViol), pluginViolation: round(famPluginViol) } },
-  runtimeMs: Date.now() - t0,
 };
+const runtimeMs = Date.now() - t0;
 fs.mkdirSync(path.join(ROOT, 'results'), { recursive: true });
 fs.writeFileSync(path.join(ROOT, 'results/results.json'), JSON.stringify(out, null, 1));
-console.log(JSON.stringify({ perFamily: { ...out.perFamily, policies: undefined }, orgWide: out.orgWide, resplitsOrg: out.resplits.org, famMean: out.resplits.perFamilyMean, runtimeMs: out.runtimeMs }, null, 1));
+console.log(JSON.stringify({ perFamily: { ...out.perFamily, policies: undefined }, orgWide: out.orgWide, resplitsOrg: out.resplits.org, famMean: out.resplits.perFamilyMean, runtimeMs }, null, 1));
 for (const p of policies) console.log(p.family, p.cal, p.test, 'lam', p.lambda, 'test risk', p.testRisk, 'sav', p.testSavings, 'plugin', p.plugin, p.pluginTestRisk, p.pluginTestSavings, 'labels', p.labelsNeeded);
 for (const r of famSplit) console.log(r.family, 'ltt viol', r.lttViolation, 'plugin viol', r.pluginViolation, 'ltt sav', r.lttSavings, 'plug sav', r.pluginSavings);
