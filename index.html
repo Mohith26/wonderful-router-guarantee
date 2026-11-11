@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Model router · AI Gateway · Wonderful (concept: Router guarantee)</title>
+  <meta name="description" content="Unofficial concept demo: certify the Wonderful AI Gateway auto router's quality loss versus the premium model with Learn-then-Test, on public SPROUT routing data." />
+  <link rel="icon" href="assets/w.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="top">
+      <button class="ib" id="sideToggle" aria-label="Toggle sidebar"><i data-lucide="panel-left"></i></button>
+      <span class="vsep"></span>
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="#/model-router" class="crumb"><i data-lucide="git-fork"></i>AI Gateway</a>
+        <span class="slash">/</span>
+        <span class="crumb cur" id="crumbCur">Model router</span>
+      </nav>
+      <div class="top-r">
+        <span class="policy-pill" id="policyPill" hidden></span>
+        <button class="ib round" aria-label="Search" data-static="1"><i data-lucide="search"></i></button>
+        <button class="avatar" aria-label="Account" data-static="1">GB</button>
+      </div>
+    </header>
+    <div class="body">
+      <aside class="side" id="side" aria-label="AI Gateway">
+        <div class="sec">Observe</div>
+        <a class="si" href="#/overview" data-static="1"><i data-lucide="chart-column"></i><span>Overview</span></a>
+        <a class="si" href="#/usage" data-static="1"><i data-lucide="chart-line"></i><span>Usage</span></a>
+        <a class="si" href="#/tasks" data-static="1"><i data-lucide="list-checks"></i><span>Tasks</span></a>
+        <div class="sec">Control</div>
+        <a class="si" href="#/model-access" data-static="1"><i data-lucide="box"></i><span>Model access</span></a>
+        <a class="si active" href="#/model-router" aria-current="page"><i data-lucide="signpost"></i><span>Model router</span></a>
+        <a class="si" href="#/spend-limits" data-static="1"><i data-lucide="circle-dollar-sign"></i><span>Spend limits</span></a>
+        <a class="si" href="#/governance" data-static="1"><i data-lucide="shield-check"></i><span>Governance</span></a>
+        <a class="si" href="#/connectors" data-static="1"><i data-lucide="plug"></i><span>Connectors</span></a>
+      </aside>
+      <main class="main" id="main" tabindex="-1">
+        <div class="boot" aria-live="polite"><div class="sk h"></div><div class="sk s"></div><div class="sk-row"><div class="sk c"></div><div class="sk c"></div><div class="sk c"></div><div class="sk c"></div></div><div class="sk big"></div></div>
+      </main>
+    </div>
+    <footer class="foot">Unofficial concept demo by Mohith Gajjela. Not affiliated with Wonderful. Public data: SPROUT routing benchmark (judge scores, token counts); list prices. <a href="https://github.com/Mohith26/wonderful-router-guarantee">Source</a></footer>
+  </div>
+  <div class="overlay" id="overlay" hidden></div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

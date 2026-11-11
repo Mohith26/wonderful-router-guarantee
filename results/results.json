@@ -1,0 +1,225 @@
+{
+ "generatedBy": "node scripts/report.mjs",
+ "data": "data/router.json (SPROUT, public)",
+ "eps": 0.03,
+ "delta": 0.05,
+ "rows": {
+  "train_router": 3298,
+  "calibration": 3335,
+  "test": 6636
+ },
+ "router": [
+  {
+   "model": "llama-3.2-3b",
+   "calAUC": 0.6424,
+   "baseRate": 0.582
+  },
+  {
+   "model": "llama-3.1-8b",
+   "calAUC": 0.6171,
+   "baseRate": 0.6573
+  },
+  {
+   "model": "gpt-4o-mini",
+   "calAUC": 0.5531,
+   "baseRate": 0.872
+  },
+  {
+   "model": "llama-3.3-70b",
+   "calAUC": 0.7778,
+   "baseRate": 0.7016
+  }
+ ],
+ "alwaysCheap": [
+  {
+   "model": "llama-3.2-3b",
+   "risk": 0.2498,
+   "savings": 0.9872
+  },
+  {
+   "model": "llama-3.1-8b",
+   "risk": 0.1994,
+   "savings": 0.9561
+  },
+  {
+   "model": "gpt-4o-mini",
+   "risk": 0.0852,
+   "savings": 0.9316
+  },
+  {
+   "model": "llama-3.3-70b",
+   "risk": 0.1058,
+   "savings": 0.8919
+  }
+ ],
+ "perFamily": {
+  "testRisk": 0.0125,
+  "savings": 0.3111,
+  "offPremium": 0.3115,
+  "mix": [
+   0.003,
+   0.0124,
+   0.2847,
+   0.0115,
+   0.6885
+  ],
+  "policies": [
+   {
+    "family": "General assistant",
+    "cal": 1444,
+    "test": 2911,
+    "lambda": 0.9225,
+    "certified": true,
+    "calRisk": 0.0192,
+    "testRisk": 0.0213,
+    "testSavings": 0.5762,
+    "offPremium": 0.6036,
+    "plugin": 0.88,
+    "pluginTestRisk": 0.0316,
+    "pluginTestSavings": 0.7384,
+    "labelsNeeded": null
+   },
+   {
+    "family": "Knowledge Q&A",
+    "cal": 921,
+    "test": 1866,
+    "lambda": 1,
+    "certified": true,
+    "calRisk": 0,
+    "testRisk": 0.0011,
+    "testSavings": 0.0008,
+    "offPremium": 0.0027,
+    "plugin": 0.995,
+    "pluginTestRisk": 0.0304,
+    "pluginTestSavings": 0.1087,
+    "labelsNeeded": 8849
+   },
+   {
+    "family": "Math",
+    "cal": 804,
+    "test": 1462,
+    "lambda": 0.985,
+    "certified": true,
+    "calRisk": 0.0174,
+    "testRisk": 0.0129,
+    "testSavings": 0.2215,
+    "offPremium": 0.2059,
+    "plugin": 0.9775,
+    "pluginTestRisk": 0.0247,
+    "pluginTestSavings": 0.3572,
+    "labelsNeeded": 5550
+   },
+   {
+    "family": "Multi-step reasoning",
+    "cal": 47,
+    "test": 123,
+    "lambda": null,
+    "certified": false,
+    "calRisk": 0,
+    "testRisk": 0,
+    "testSavings": 0,
+    "offPremium": 0,
+    "plugin": 1,
+    "pluginTestRisk": 0,
+    "pluginTestSavings": 0,
+    "labelsNeeded": 99
+   },
+   {
+    "family": "Document Q&A (RAG)",
+    "cal": 119,
+    "test": 274,
+    "lambda": 1,
+    "certified": true,
+    "calRisk": 0,
+    "testRisk": 0.0004,
+    "testSavings": 0.0047,
+    "offPremium": 0.0146,
+    "plugin": 0.995,
+    "pluginTestRisk": 0.0204,
+    "pluginTestSavings": 0.3334,
+    "labelsNeeded": 2567
+   }
+  ]
+ },
+ "orgWide": {
+  "lambda": 0.985,
+  "testRisk": 0.0262,
+  "savings": 0.2031,
+  "offPremium": 0.212
+ },
+ "resplits": {
+  "B": 200,
+  "org": {
+   "B": 200,
+   "nCal": 3335,
+   "nTest": 6636,
+   "lttViolation": 0.01,
+   "pluginViolation": 0.155,
+   "lttSavings": 0.1757,
+   "pluginSavings": 0.2369,
+   "certifiedShare": 1
+  },
+  "perFamily": [
+   {
+    "family": "General assistant",
+    "B": 200,
+    "nCal": 1444,
+    "nTest": 2911,
+    "lttViolation": 0.005,
+    "pluginViolation": 0.485,
+    "lttSavings": 0.5666,
+    "pluginSavings": 0.73,
+    "certifiedShare": 1
+   },
+   {
+    "family": "Knowledge Q&A",
+    "B": 200,
+    "nCal": 921,
+    "nTest": 1866,
+    "lttViolation": 0.005,
+    "pluginViolation": 0.39,
+    "lttSavings": 0.0492,
+    "pluginSavings": 0.1029,
+    "certifiedShare": 1
+   },
+   {
+    "family": "Math",
+    "B": 200,
+    "nCal": 804,
+    "nTest": 1462,
+    "lttViolation": 0.005,
+    "pluginViolation": 0.385,
+    "lttSavings": 0.2485,
+    "pluginSavings": 0.4179,
+    "certifiedShare": 1
+   },
+   {
+    "family": "Multi-step reasoning",
+    "B": 200,
+    "nCal": 47,
+    "nTest": 123,
+    "lttViolation": 0,
+    "pluginViolation": 0.19,
+    "lttSavings": 0,
+    "pluginSavings": 0.067,
+    "certifiedShare": 0
+   },
+   {
+    "family": "Document Q&A (RAG)",
+    "B": 200,
+    "nCal": 119,
+    "nTest": 274,
+    "lttViolation": 0,
+    "pluginViolation": 0.495,
+    "lttSavings": 0.0198,
+    "pluginSavings": 0.447,
+    "certifiedShare": 1
+   }
+  ],
+  "perFamilyMean": {
+   "lttViolation": 0.003,
+   "pluginViolation": 0.389
+  }
+ },
+ "runtimeMs": 1365
+}
