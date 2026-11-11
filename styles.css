@@ -46,7 +46,7 @@ a.crumb:hover { color: var(--t2); background: var(--hover); }
 .ph h1 { margin: 0; font-size: 26px; font-weight: 500; line-height: 32px; color: var(--t1); letter-spacing: -0.5px; }
 .ph p { margin: 6px 0 0; font-size: 14px; line-height: 17px; color: var(--t3); }
 .ph .r { margin-left: auto; display: flex; align-items: center; gap: 8px; }
-.btn { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--ring); background: var(--bg); color: var(--t2); font-size: 14px; }
+.btn { white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 8px; border: 1px solid var(--ring); background: var(--bg); color: var(--t2); font-size: 14px; }
 .btn:hover { background: var(--hover); }
 .btn svg { width: 15px; height: 15px; }
 .btn.primary { background: var(--t1); color: #141414; border-color: var(--t1); font-weight: 500; }
